@@ -1,0 +1,21 @@
+ion-content {
+  --background: #f0f0f0;
+}
+
+ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --inner-padding-end: 16px;
+  --inner-padding-start: 16px;
+  --border-style: none;
+  --background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-label {
+  p {
+    color: #808080;
+  }
+}

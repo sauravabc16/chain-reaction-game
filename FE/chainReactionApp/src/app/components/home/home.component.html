@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Chain Reaction Game
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <h1>Welcome to Chain Reaction!</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-button expand="block" routerLink="/create-server">
+          Create a New Game
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-button expand="block" routerLink="/join-server">
+          Join an Existing Game
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-button expand="block" routerLink="/server-list">
+          View Game Server List
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content>
+  <ion-list>
+    <ion-item button routerLink="/server-creation">Server Creation</ion-item>
+    <ion-item button routerLink="/server-list">Server List</ion-item>
+    <ion-item button routerLink="/player-setup">Player Setup</ion-item>
+    <ion-item button routerLink="/game">Game</ion-item>
+    <ion-item button routerLink="/end-game">End Game</ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "chainReactionApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

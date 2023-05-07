@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Servers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let server of servers">
+      <ion-label>
+        <h2>{{ server.name }}</h2>
+        <p>Admin: {{ server.admin }}</p>
+        <p>Players: {{ server.players }} / {{ server.maxPlayers }}</p>
+      </ion-label>
+      <ion-button fill="outline" slot="end" [routerLink]="['/player-setup', server.id]">
+        Join
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

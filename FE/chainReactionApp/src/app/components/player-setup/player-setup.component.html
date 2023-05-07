@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Player Setup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ server.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Admin: {{ server.admin }}</p>
+      <p>Players: {{ server.players }} / {{ server.maxPlayers }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-label position="floating">Player Name</ion-label>
+    <ion-input [(ngModel)]="playerName"></ion-input>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let color of colors">
+        <ion-button (click)="selectColor(color)" [color]="color" [fill]="selectedColor === color ? 'solid' : 'outline'">
+          {{ color }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="block" (click)="joinGame()" [disabled]="!playerName || !selectedColor">
+    Join Game
+  </ion-button>
+</ion-content>
