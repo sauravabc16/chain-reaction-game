@@ -1,1 +1,52 @@
-\node_modules
+# Node.js dependencies
+node_modules/
+npm-debug.log
+
+# Angular build output
+dist/
+
+# IDE and editor files
+.idea/
+*.iml
+*.suo
+*.sln
+*.swp
+*.user
+*.userosscache
+*.vscode
+.vs/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+._*
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.log
+*.tlog
+
+# Test and coverage output
+coverage/
+karma.conf.js
+e2e/
+
+# End-to-end test output
+protractor.conf.js
+e2e/
+
+# TypeScript compilation output
+**/*.js
+**/*.js.map
+**/*.d.ts
+
+# Sass compilation output
+**/*.css
+**/*.css.map
+
+# Local environment configuration
+.env
+.env.local
