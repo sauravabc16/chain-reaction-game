@@ -1,0 +1,56 @@
+.player-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  .game-board {
+    border: 1px solid #ccc;
+    padding: 1em;
+  }
+  
+  .cell {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .captured {
+    background-color: #eee;
+  }
+
+  :host {
+    ion-grid {
+      height: 100%;
+      width: 100%;
+    }
+  
+    .molecule-cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      position: relative;
+    }
+  
+    .molecule-container {
+      overflow: hidden;
+    }
+  
+    .molecule {
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      position: absolute;
+    }
+  }
+  
+  
