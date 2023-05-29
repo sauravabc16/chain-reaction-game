@@ -20,14 +20,14 @@ namespace ChainReactionGameBackend
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Configure Settings
             services.Configure<Settings>(
                 options =>
                 {
-                    options.ConnectionString = Configuration.GetSection("MongoConnection:ConnectionString").Value;
-                    options.Database = Configuration.GetSection("MongoConnection:Database").Value;
-                }
-            );
+                    options.ConnectionString = Configuration.GetSection("MongoDB:ConnectionString").Value;
+                    options.Database = Configuration.GetSection("MongoDB:Database").Value;
+                });
+            services.AddSingleton<IMongoClient, MongoClient>(
+                _ => new MongoClient(Configuration.GetSection("MongoDB:ConnectionString").Value));
 
             // Add GameContext as a service
             services.AddSingleton<GameContext>(sp => new GameContext(sp.GetRequiredService<IOptions<Settings>>()));
